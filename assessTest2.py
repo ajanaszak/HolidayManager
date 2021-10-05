@@ -59,12 +59,18 @@ def Top():
     if menuOption == '5':
         prompt2 = input("Are you sure you want to exit? [Y/N] ")
         if prompt2 == 'Y':
+            print()
             print("Goodbye!")
             # file.close()
             exit()
+        else:
+            Top()
 
 def AddHoliday():
     global holidayClass
+    global BigDict
+    global BigDateList
+    global BigNameList
     print('Add a Holiday')
     print('=============')
     inputName = input("Please enter the name of the Holiday you'd like to add to the calendar: ")
